@@ -19,10 +19,10 @@ from utils.utils_DATETIME import get_datetime
 username = "Fatir"
 school = "SMK Telkom Jakarta"
 current_class = "XI RPL 5"
-phone_number = "+62-123-123-1234"
+phone_number = "+62-xxx-xxx-xxxx"
 
 ASCII_LOGO = f"""⢀⠰⢠⢀⠀⠀⠄⢁⢀
-⠢⠈⠐⠨⠢⢄⠂⠐⢄⢁           KANCIL
+⠢⠈⠐⠨⠢⢄⠂⠐⢄⢁           KANCIL DESIGN MOCKUP
 ⡑⡀⠁⠄⠑⢄⠑⢄⠢⢄⠤⡀⡀        Owned By: {username}
 ⠐⢄⢈⠐⢅⠢⢑⢐⠘⢔⠥⡑⠕⡔⢄      {school}
 ⠀⢐⠠⡑⡐⠌⡂⠢⡑⠄⠅⢕⠑⢌⠪⡢⡀    {current_class}
