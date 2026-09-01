@@ -5,6 +5,7 @@
 
 # For now, this is just a general mockup of where things should be.
 # Most (if not all) functions don't really work yet.
+# When this placeholder is removed, that means it's ready for prod.
 
 from textual.screen import Screen
 from textual.app import ComposeResult
@@ -79,7 +80,7 @@ class HomeScreen(Screen):
         # Also use the full name. DO NOT USE ACRONYMS!
         # I know, it's pretty extra. But, I'd rather avoid all the headaches for now and just keep everything consistent.
 
-        time, date = get_datetime()
+        time, message, date = get_datetime()
 
         with Horizontal():
             with Vertical():
@@ -87,25 +88,34 @@ class HomeScreen(Screen):
 
             with Vertical():
                 with Container(id="container_BUTTON-PROGRAM-WRAPPER"):
-                    yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
+                    yield Button("\nSettings", classes="button_PROGRAMS", id="button_SETTINGS")
                     yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
                     yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
                     yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
 
                 with Container(id="container_DATE-TIME-WRAPPER"):
-                    yield Digits(time, id="digits_CLOCK")
+                    with Horizontal():
+                        yield Digits(time, id="digits_CLOCK")
+                        yield Label(message, id="label_MESSAGE")
                     yield Label(date, id="label_DATE")
                     yield Static()
                     yield Label("Failure should be our teacher,\nnot our undertaker. Failure is delay,\nnot defeat.\n -- Denis Waitley")
 
     def on_mount(self) -> None:
         self.clock = self.query_one("#digits_CLOCK", Digits)
+        self.message = self.query_one("#label_MESSAGE", Label)
         self.date = self.query_one("#label_DATE", Label)
 
         self.refresh_datetime()
         self.set_interval(1.0, self.refresh_datetime)
 
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        match event.button.id:
+            case "button_SETTINGS":
+                self.app.push_screen("settings")
+
     def refresh_datetime(self):
-        time, date = get_datetime()
+        time, message, date = get_datetime()
         self.clock.update(time)
+        self.message.update(message)
         self.date.update(date)

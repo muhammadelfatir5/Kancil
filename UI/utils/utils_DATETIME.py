@@ -14,7 +14,11 @@ def get_datetime():
     now = datetime.now()
     day = now.day
     suffix = get_suffix(day)
+
+    message = "Enjoy your weekend!" if now.strftime("%A") == "Saturday" or now.strftime("%A") == "Sunday" else "Do your best today!"
+
     return (
         now.strftime("%H:%M:%S"),
+        message,
         now.strftime(f"Today is %A, {day}{suffix} %B of %Y"),
     )
