@@ -7,6 +7,8 @@
 # Most (if not all) functions don't really work yet.
 # When this placeholder is removed, that means it's ready for prod.
 
+import subprocess
+
 from textual.screen import Screen
 from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical, Container
@@ -78,6 +80,7 @@ class HomeScreen(Screen):
         # The widget should connect to the name with lowercase. While the name should be with a hyphen. 
         # For example; button_PROGRAM-WEB-BROWSER / container_DATE-TIME-WRAPPER
         # Also use the full name. DO NOT USE ACRONYMS!
+        # If there's an acronym, specify what it is.
         # I know, it's pretty extra. But, I'd rather avoid all the headaches for now and just keep everything consistent.
 
         time, message, date = get_datetime()
@@ -88,10 +91,10 @@ class HomeScreen(Screen):
 
             with Vertical():
                 with Container(id="container_BUTTON-PROGRAM-WRAPPER"):
-                    yield Button("\nSettings", classes="button_PROGRAMS", id="button_SETTINGS")
-                    yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
-                    yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
-                    yield Button("󱅶\nPROGRAM", classes="button_PROGRAMS")
+                    yield Button("\nSettings", classes="button_PROGRAMS", id="button_PROGRAM-SETTINGS")
+                    yield Button("\nText Editor", classes="button_PROGRAMS", id="button_PROGRAM-VIM")
+                    yield Button("\nFile Manager", classes="button_PROGRAMS", id="button_PROGRAM-MC") # MC = Midnight Commander
+                    yield Button("\nTerminal", classes="button_PROGRAMS", id="button_PROGRAM-TERMINAL")
 
                 with Container(id="container_DATE-TIME-WRAPPER"):
                     with Horizontal():
@@ -99,7 +102,7 @@ class HomeScreen(Screen):
                         yield Label(message, id="label_MESSAGE")
                     yield Label(date, id="label_DATE")
                     yield Static()
-                    yield Label("Failure should be our teacher,\nnot our undertaker. Failure is delay,\nnot defeat.\n -- Denis Waitley")
+                    yield Label("Failure should be our teacher,\nnot our undertaker. Failure is delay,\nnot defeat.\n -- Denis Waitley", id="label_QUOTE") # Gonna add the function to change this dynamically later.
 
     def on_mount(self) -> None:
         self.clock = self.query_one("#digits_CLOCK", Digits)
@@ -111,8 +114,18 @@ class HomeScreen(Screen):
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         match event.button.id:
-            case "button_SETTINGS":
+            case "button_PROGRAM-SETTINGS":
                 self.app.push_screen("settings")
+            case "button_PROGRAM-VIM":
+                with self.app.suspend():
+                    subprocess.run(["vim"]) # Gotta teach 'em young and teach 'em right!
+            case "button_PROGRAM-MC":
+                with self.app.suspend():
+                    subprocess.run(["mc", "--nocolor"])
+            case "button_PROGRAM-TERMINAL":
+                with self.app.suspend():
+                    print("Pro-tip: Press CTRL+D to exit the terminal!")
+                    subprocess.run(["bash"]) # Most Linux users use bash anyways ¯\_(ツ)_/¯
 
     def refresh_datetime(self):
         time, message, date = get_datetime()

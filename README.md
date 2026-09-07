@@ -47,9 +47,9 @@ While a mistake can be very cheap to fix, like replacing a fried capacitor. Some
 
 Although, it should be noted that Kancil does <u>***NOT***</u> aim to make experimentations reckless. Electrical safety still matters. Instead, it aims to make mistakes *reasonable* mistakes recoverable and affordable.
 
-#### In Short.
+### In Short.
 
-#### *"Students deserve a safe platform to learn and build on top of, not just a product to consume."*
+*"Students deserve a safe platform to learn and build on top of, not just a product to consume."*
 
 ## Why Does This Exist?
 
