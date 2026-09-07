@@ -1,6 +1,7 @@
 # KANCIL
 *An open-source, modular, and repairable computing platform designed to encourage students to create, experiment, modify, and understand technology.*
 
+![Kancil Logo](media/Logo.png)
 ![Kancil UI Screenshot](media/Kancil_UI_Screenshot.png)
 
 ⚠️ **Kancil is currently an early-stage personal project and concept.**
