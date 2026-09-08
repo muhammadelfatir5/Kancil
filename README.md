@@ -20,7 +20,7 @@ Kancil is an experimental learning platform that aims to encourage students to r
 
 ### A Platform For Creativity.
 
-A Kancil could start its life as a normal computer for schoolwork. Then, by the time the owner graduates, it might no longer resemble the device they originally received.
+A Kancil could start its life as a normal computer for schoolwork, though not fully assembled. Students could receive a kit containing the components and build their first Kancil. Then, by the time the owner graduates, it might no longer resemble the device they originally received.
 
 One student might turn it into a handheld game console. Another might build a fully-fledged portable workstation. And another might create an entirely different product from the Kancil platform.
 
