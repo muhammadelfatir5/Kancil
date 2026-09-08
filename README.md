@@ -127,8 +127,12 @@ That's why I'm building it.
 # Contributing
 
 Contribution are very much welcome.
-If you don't know how to program or create CAD models, there are other ways to contribute. Such as translation, writing guides, reporting bugs, request new features, etc etc.
-If you want to contribute, please read [The Contributing Guidelines.](CONTRIBUTING.md)
+
+But, unfortunately, contributions are not currently open. Kancil is an early-stage project, and I'm still working on the contribution guidelines and workflow.
+
+~~If you don't know how to program or create CAD models, there are other ways to contribute. Such as translation, writing guides, reporting bugs, request new features, etc etc.
+If you want to contribute, please read
+[The Contributing Guidelines.](CONTRIBUTING.md)~~
 
 # Licensing
 
