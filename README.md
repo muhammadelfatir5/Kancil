@@ -42,13 +42,13 @@ A team that combines students with different areas of expertise can simulate rea
 
 ### Help Fix Mistakes, Not Prevent Them.
 
-Mistakes happens, people make mistakes, mistakes is what makes us *human*. That's why Kancil aims *reframe* mistakes and failures as a *setback* rather than trying to prevent them in the first place.
+Mistakes happens, people make mistakes, mistakes is what makes us *human*. That's why Kancil aims to *reframe* mistakes and failures as a *setback* rather than trying to prevent them in the first place.
 
 While a mistake can be very cheap to fix, like replacing a fried capacitor. Some can be very expensive, like having to replace the whole board.
 
 *One of the main reasons why* students avoid repairing or tinkering with their devices, is because a mistake can be very expensive. Which is why we try to make our design to use *as little expensive components as possible*, while keeping it usable and reliable enough for general schoolwork.
 
-Although, it should be noted that Kancil does <u>***NOT***</u> aim to make experimentations reckless. Electrical safety still matters. Instead, it aims to make mistakes *reasonable* mistakes recoverable and affordable.
+Although, it should be noted that Kancil does <u>***NOT***</u> aim to make experimentations reckless. Electrical safety still matters. Instead, it aims to make *reasonable* mistakes recoverable and affordable.
 
 ### In Short.
 
@@ -56,7 +56,7 @@ Although, it should be noted that Kancil does <u>***NOT***</u> aim to make exper
 
 ## Why Does This Exist?
 
-You see, I was born at a very young age. And, of the main reasons *why* I'm currently studying Software Engineering at SMK Telkom Jakarta is because I watched YouTubers play video games when I was a 4th grader, and I thought to myself *"I wanna make that"*.
+You see, I was born at a very young age. And, one of the main reasons *why* I'm currently studying Software Engineering at SMK Telkom Jakarta is because I watched YouTubers play video games when I was a 4th grader, and I thought to myself *"I wanna make that"*.
 
 And with the power of my old Lenovo laptop, I learned C#, Unity, Windows batch scripting, and bits of web development here and there.
 
@@ -66,12 +66,12 @@ As the adventurous little goblin I was (still am), I wanted to know *how* it wor
 At first, it was just some simple stuff like replacing the thermal paste, or replacing the dead battery.
 While others were... Shoving an SSD into the WWAN slot to use for Linux.
 
-Some of those *adventures* was really good at teaching me how the laptop worked. While others... Let's just say they were *amazing* at making me learn how to find the nearest repair shops on Google Maps. Take a guess which one took me to the repair shop. Hint; it wasn't the SSD.
+Some of those *adventures* were really good at teaching me how the laptop worked. While others... Let's just say they were *amazing* at making me learn how to find the nearest repair shops on Google Maps. Take a guess which one took me to the repair shop. Hint; it wasn't the SSD.
 
 Then, after I finally joined SMK Telkom Jakarta, I noticed the vast difference between the *required* hardware, and the hardware that *students owned*.
 
 Some students had really high-end gaming laptops that was completely overkill for `System.out.println("Hello, World!")`
-While some had laptops that can barely run the software we used at school.
+While some had laptops that could barely run the software we used at school.
 
 And that situation, led me to a question:
 
@@ -81,33 +81,56 @@ And that situation, led me to a question:
 
 ### Affordability
 
-Kancil aims to be as affordable as reasonably possible.
+To reduce costs should not be at the expense of usability and user experience.
 
-TODO: write more here.
+Even so, the Kancil should be *usable*, not high-end. Which means that it should meet the minimum specifications required for its intended educational use.
 
 ### Repairability
 
-Kancil aims to be as repairable as reasonably possible.
+The design of the Kancil should encourage students to repair their Kancil as much as possible.
 
-TODO: Write more here.
+Which means; using standard fasteners (No funky Apple-esque pentalobe screws), modular construction (Parts like batteries, screen, charging ports can be independently removed and replaced, rather than being permanently fused together), don't use glue (Components and casing should use clips or screws instead of adhesive that can damage the component during removal), etc etc.
 
 ### Modularity
 
-Kancil aims to be as modular as reasonably possible.
+The Kancil should not be a *monolith*, instead, it should be comprised of different, interchangeable, and independent systems working together.
 
-TODO: Write more here.
+Each module should do exactly *one* job (eg; the battery only provides power, the storage only provides storage space. Not; the battery provides storage, power, and displays the UI), interact exclusively through defined interfaces (eg; USB), and can be independently replaced without replacing another module.
 
 ### Open Source
 
-Kancil aims to be as open as reasonably possible.
-
-This repository will document everything from designs, decisions, success, failure, etc etc.
-
-TODO: Write more here.
+The Kancil repository includes everything from source code, designs, documentations, etc etc. As to encourage students (and regular users alike) to be able to modify and maybe even create their own Kancil just through this repository.
 
 # Long-term Vision
 
 # Problems We Haven't Solved Yet
+
+## Costs
+
+Currently, the Kancil is based on the Raspberry Pi platform. Which means we follow Raspberry Pi prices. In Indonesia, this price fluctuates pretty frequently, with the Raspberry Pi Zero W (the absolute bare minimum for this project) currently at Rp500.000 and newer models like the Raspberry Pi 5 sitting at Rp5.000.000+
+
+Even now, prototype v1 costs about Rp1.000.000+ (tools included)
+|Priority|Name|Cost|
+|--|--|--|
+|1.|Raspberry Pi Zero W|Rp450.000|
+|2.|Power Adapter (sold separately)|Rp30.000|
+|3.|32GB Micro SD|Rp100.000|
+|4.|Solder kit|Rp50.000|
+|5.|Multimeter|Rp55.000|
+|6.|ILI9341|Rp200.000|
+|7.|4000mAh LiPo|Rp185.000|
+|8.|MT3608|Rp14.000|
+|9.|TP4056|Rp14.000|
+|10.|SPDT Switch|Rp7.600|
+|TOTAL||Rp1.015.600|
+
+Of course, aiming for under Rp1.000.000 for a complete Linux-based computer with specs that are good enough for the modern world is unrealistic. But, at the very least, we want to design it to be *as affordable as possible.*
+
+*PS Too lazy to do currency conversion right now, sorry.*
+
+## Usability
+
+The current prototype uses the Raspberry Pi Zero W. It's a board with a 32 bit processor and 512MB RAM. So, as of now, it's not exactly usable for daily driving (unless you're a masochist and only use terminal-only programs. In which case, respect.)
 
 # Final Note
 
