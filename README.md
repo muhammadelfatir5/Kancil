@@ -30,7 +30,7 @@ One Kancil could become an entirely different device, depending on the student's
 
 Students from different majors could collaborate and create their very own custom product based on the Kancil platform. 
 
-***For example;***
+*For example;*
 
 A TJKT (In English: Computer Network and Telecommunications Engineering) student could solder, assemble, and create custom hardware.
 
@@ -130,7 +130,7 @@ Of course, aiming for under Rp1.000.000 for a complete Linux-based computer with
 
 ## Usability
 
-The current prototype uses the Raspberry Pi Zero W. It's a board with a 32 bit processor and 512MB RAM. So, as of now, it's not exactly usable for daily driving (unless you're a masochist and only use terminal-only programs. In which case, respect.)
+The current prototype uses the Raspberry Pi Zero W. It's a board with a 32 bit processor and 512MB RAM. So, as of now, it's not exactly usable for daily driving (unless you're a masochist and exclusively use terminal-only programs. In which case, respect.)
 
 # Final Note
 
@@ -149,11 +149,10 @@ That's why I'm building it.
 
 # Contributing
 
-Contribution are very much welcome.
+Unfortunately, contributions are not currently open. Kancil is an early-stage project, and I'm still working on the contribution guidelines and workflow.
 
-But, unfortunately, contributions are not currently open. Kancil is an early-stage project, and I'm still working on the contribution guidelines and workflow.
-
-~~If you don't know how to program or create CAD models, there are other ways to contribute. Such as translation, writing guides, reporting bugs, request new features, etc etc.
+~~Contribution are very much welcome.
+If you don't know how to program or create CAD models, there are other ways to contribute. Such as translation, writing guides, reporting bugs, request new features, etc etc.
 If you want to contribute, please read
 [The Contributing Guidelines.](CONTRIBUTING.md)~~
 
