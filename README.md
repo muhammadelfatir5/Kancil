@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="media/Logo.png" alt="Kancil Logo">
-  <img src="media/Kancil_UI_Screenshot.png" alt="Kancil UI Screenshot">
+  <img src="media/Kancil UI on hardware.jpeg" alt="Kancil UI Screenshot">
 </p>
 
 ⚠️ **Kancil is currently an early-stage personal project and concept.**
