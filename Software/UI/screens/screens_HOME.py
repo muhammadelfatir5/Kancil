@@ -73,10 +73,13 @@ class HomeScreen(Screen):
                 with Container(id="container_DATE-TIME-WRAPPER"):
                     with Horizontal():
                         yield Digits(time, id="digits_CLOCK")
-                        yield Label(message, id="label_MESSAGE")
+                        yield Label(username)
+                        yield Label(school)
+                        yield Label(current_class)
+                        yield Label(phone_number)
+                    
                     yield Label(date, id="label_DATE")
-                    yield Static()
-                    yield Label("Failure should be our teacher,\nnot our undertaker. Failure is delay,\nnot defeat.\n -- Denis Waitley", id="label_QUOTE") # Gonna add the function to change this dynamically later.
+                    yield Label(message, id="label_MESSAGE")
 
     def on_mount(self) -> None:
         self.clock = self.query_one("#digits_CLOCK", Digits)
