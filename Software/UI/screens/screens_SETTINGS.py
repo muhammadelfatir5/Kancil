@@ -12,33 +12,6 @@ from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical, Container
 from textual.widgets import Label, Button, Digits, Static, Input
 
-ASCII_LOGO = f"""⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠈⠠⠀⠀⠀⡠⢐⠄
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠢⠈⠠⡠⢂⠑⠈⠀⡊
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⡠⢄⠢⠨⢐⠨⠐⢈⠀⡁⠢
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⢕⢡⢱⠰⠡⡑⠄⢅⠑⠄⠄⡂⠁
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢢⠣⢑⠨⠨⡂⢅⠑⢄⢑⠄⠅⢅⢑⠠
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢆⢣⠑⠄⠅⡑⠌⠄⢅⠑⠄⠅⢅⠑⠄⠅⠅
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡘⢜⢜⠨⠀⠀⠠⠡⡑⠄⠅⠅⢕⠐⠅⠅⢕
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢜⠐⠌⠢⠠⡈⠢⠨⠨⡈⠪⠠⠡⠡⡑⠐
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠢⠡⠡⠡⡑⠌⠌⠌⠌⠌⠌⠌⢌⢌⠠
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⡊⠌⠌⢌⠢⠨⠨⠨⠨⡊⠌⢌⢊⢂⠢⡈
-⠀⠀⢔⢔⠑⠅⢅⢕⢔⠷⢗⢎⣆⠳⡵⡦⡄⣢⠠⡁⣤⣡⣅⡁⡁⠅⡐⠨⡐⡐⢄⢑⠐
-⠀⢄⠕⠄⢅⣕⢗⣇⢏⣻⡑⢅⣥⣑⠲⢨⣦⣪⡂⡪⠭⡑⡑⡐⠌⠢⡈⡂⡢⡈⡂⡂⡂
-⡐⢅⢅⢃⠢⢑⢐⠐⢍⠑⢌⠢⡉⡋⡣⢑⠌⢌⠑⢌⢂⢂⠢⠨⡈⡂⡂⡂⡂⡂⡂⠢⡇
-⠀⠀⠀⡂⡑⡐⠄⠕⢄⢑⢄⢑⢐⠐⢌⠐⢌⢂⢑⢐⠐⠄⢅⢑⢐⢐⠌⡂⡂⡂⡪⢸⡇
-⠀⠀⠨⡐⡐⠌⠌⢌⢂⢂⢂⢂⠢⡑⠄⢕⢐⢐⢐⠄⠅⢅⢑⢐⢐⢄⢑⢐⢐⢐⠌⣾⡅
-⠀⠀⠀⠢⠨⠨⡈⣂⠢⡂⡂⡢⡁⠢⡑⡐⡐⠐⡠⠡⠡⡑⡐⡐⡐⡐⡐⡐⡐⢄⣽⣗⠁
-⠀⠀⠀⠡⠡⡑⡸⢐⢕⢜⢜⢔⢌⣆⣂⡂⡀⡂⠌⢌⢂⢂⢂⡂⡪⡐⣐⣌⣼⡽⣾⠁
-⠀⠀⡀⠁⢅⠢⢑⢸⢨⢪⢪⠪⡪⡻⢽⠮⡇⢇⢑⢐⠐⢔⠕⡔⣕⣯⢷⣻⣾⠛⠁
-⠀⠀⠄⠨⢐⢈⢂⠪⡪⠊⡀⢁⠁⡁⠃⠃⠣⠃⡂⠢⠡⡑⢅⠳⡻⠺⠛⠉⢄
-⠀⠀⠂⡈⡂⡂⠢⡑⠌⠀⠄⠠⠀⡀⠀⠀⠀⠀⠨⡈⠢⡈⡢⡃⠀⢂⠈⢐⠐
-⠀⠀⠀⠄⠢⡈⡂⡪⢀⠡⠐⠀⡁⠀⠀⠀⠀⠀⠀⠈⡂⡂⡎⠆⠁⠠⠐⢐
-⠀⠀⠀⠀⠡⡂⡂⡇⠀⠐⠈⠠⠈⠀⠀⠀⠀⠀⠀⠀⢂⠂⡇⡅⠀⢂⠈⡐⡀
-⠀⠀⠀⠀⢁⠢⢸⠀⠀⢀⠁⠨⠀⠀⠀⠀⠀⠀⠀⠀⢀⢑⢸⠀⠀⠠⠀⠂⠄
-⠀⠀⠀⠀⠀⠊⠜⠀⠀⠀⠀⡁⠂⠀⠀⠀⠀⠀⠀⠀⠀⠐⠈⠂⠀⠀⠈⠈⠀⠄
-⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠄⠈⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠁⠀⠀⠐⠀⠐
-"""
-
 class SettingScreen(Screen):
     def compose(self) -> ComposeResult:
         with Horizontal():
@@ -53,9 +26,6 @@ class SettingScreen(Screen):
                 with Horizontal():
                     yield Button("Save", variant="success", id="button_SAVE")
                     yield Button("󰈆 Exit", variant="error", id="button_EXIT")
-
-            with Vertical():
-                yield Label(ASCII_LOGO)
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "button_EXIT":

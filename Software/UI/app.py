@@ -10,7 +10,7 @@ from screens.screens_SETTINGS import SettingScreen
 
 class KancilUI(App):
     def on_mount(self):
-        self.theme = "textual-light"
+        self.theme = "ansi-light"
 
         self.install_screen(HomeScreen(), "home")
         self.install_screen(SettingScreen(), "settings")

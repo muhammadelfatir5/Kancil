@@ -24,32 +24,6 @@ school = "SMK Telkom Jakarta"
 current_class = "XI RPL 5"
 phone_number = "+62-xxx-xxx-xxxx"
 
-ASCII_LOGO = f"""⢀⠰⢠⢀⠀⠀⠄⢁⢀
-⠢⠈⠐⠨⠢⢄⠂⠐⢄⢁           KANCIL DESIGN MOCKUP
-⡑⡀⠁⠄⠑⢄⠑⢄⠢⢄⠤⡀⡀        Owned By: {username}
-⠐⢄⢈⠐⢅⠢⢑⢐⠘⢔⠥⡑⠕⡔⢄      {school}
-⠀⢐⠠⡑⡐⠌⡂⠢⡑⠄⠅⢕⠑⢌⠪⡢⡀    {current_class}
-⠨⡐⡐⡐⠌⠢⡈⡂⠢⠡⡑⠄⠑⠄⠅⡇⡇
-⠐⢐⠐⠌⢌⢂⠢⠨⠨⠢⠨⡀⠀⠨⡈⢎⢎⢆   If found,
-⠀⠠⠡⡑⡐⠄⠅⠅⢅⢅⢑⠐⠄⠢⡈⡂⠣⠃   please contact:
-⠀⢐⢀⠢⠨⠨⠨⠨⡂⡂⠢⠡⠡⡑⡐⠌⢌    {phone_number}
-⠀⠀⠐⠌⠌⠌⢌⢂⠢⠨⠨⠨⡂⠢⠨⡈⡂⠢⠠
-⠀⠀⠁⠅⠅⢅⢑⠐⢄⠡⢁⢡⣨⣌⣌⢄⢀⡢⢰⢴⠮⡎⣪⡪⠾⢾⢰⡨⡨⡈⠪⢢⠢
-⠀⠀⠠⠡⠡⡑⢄⢑⠐⢌⢂⠢⡈⠪⡩⢕⢐⣭⣢⡆⡓⣢⣬⢌⢙⣝⣕⣕⢗⣎⢌⠂⢇⢇
-⠀⠀⢸⠨⡈⡂⡂⠢⡑⡐⡐⡐⢌⠢⡈⠢⠩⡈⡂⡃⡊⡋⡊⠢⠡⡉⠪⡐⡐⠌⡂⡑⢔⢑⠄
-⠀⠀⢸⡕⡐⡐⢌⢂⢂⢂⠢⡈⡂⠢⠨⠨⡂⡂⡂⡂⡂⠪⠨⡈⡂⡊⡂⠢⡈⡂⠢⠠
-⠀⠀⢸⣧⠢⡈⡂⡂⡂⡢⢑⠐⠌⠌⢌⢂⢂⠢⡈⡢⠨⠨⡂⡂⠢⠢⠨⡂⡂⠪⠨⠨⠂
-⠀⠀⠈⣯⣧⡂⡂⡂⡢⡈⠢⠡⠡⠡⡑⡐⢄⠑⠐⠌⢌⢂⠢⠨⡨⠨⡢⡢⠨⠨⠨⡨
-⠀⠀⠀⠐⣷⣻⣦⣂⡢⢨⠨⢨⠨⡈⠢⠨⡐⡈⡀⣑⣐⣤⡅⡇⡇⡳⡰⡘⢬⠨⡊⡐
-⠀⠀⠀⠀⠀⠻⢾⡽⣯⡷⣝⢔⠱⡨⠨⡂⠢⢸⢸⢜⢷⢳⢣⢣⢱⢱⠱⡑⠌⡂⠢⠐⢀
-⠀⠀⠀⠀⠀⠀⠌⢉⠛⠻⠽⢎⢊⢊⠢⠨⡈⠢⠃⠃⠃⢁⠡⠐⢀⠱⢱⠡⡑⠨⠨⡐
-⠀⠀⠀⠀⠀⠀⠑⠠⠀⠡⠐⢘⠔⠄⢅⢑⠈⠀⠀⠀⠀⠀⠐⢈⠠⠐⢘⠔⡨⡈⡂⡂⠐
-⠀⠀⠀⠀⠀⠀⠈⡂⢁⠐⠈⠘⡜⡈⡂⢂⠀⠀⠀⠀⠀⠈⡂⠠⠐⠀⠄⡇⡂⡂⠢⠐
-⠀⠀⠀⠀⠀⠀⠀⡂⠄⠂⠁⢠⢣⠢⢈⠀⠀⠀⠀⠀⠀⠀⠠⠐⢈⠀⠂⢰⢐⠨⡈⠄
-⠀⠀⠀⠀⠀⠀⠀⡂⢀⠁⠀⢸⢐⠅⠠⠀⠀⠀⠀⠀⠀⠀⠈⠂⡀⠂⠀⠀⢕⠐⠄
-⠀⠀⠀⠀⠀⠀⡀⠀⢀⠀⠀⠈⠂⠈⠀⠀⠀⠀⠀⠀⠀⠀⡀⢁⠀⠀⠀⠀⠕⠨
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠀⠀⠂⢀"""
-
 class HomeScreen(Screen):
     CSS= """
         #container_BUTTON-PROGRAM-WRAPPER {
@@ -68,7 +42,7 @@ class HomeScreen(Screen):
         }
 
         #container_DATE-TIME-WRAPPER{
-            border: solid black;
+            border: solid white;
             width: 100%
         }
     """
@@ -86,8 +60,8 @@ class HomeScreen(Screen):
         time, message, date = get_datetime()
 
         with Horizontal():
-            with Vertical():
-                yield Static(ASCII_LOGO)
+            #with Vertical():
+            #    yield Static(ASCII_LOGO)
 
             with Vertical():
                 with Container(id="container_BUTTON-PROGRAM-WRAPPER"):
