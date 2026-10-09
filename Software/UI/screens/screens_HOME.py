@@ -73,10 +73,11 @@ class HomeScreen(Screen):
                 with Container(id="container_DATE-TIME-WRAPPER"):
                     with Horizontal():
                         yield Digits(time, id="digits_CLOCK")
-                        yield Label(username)
-                        yield Label(school)
-                        yield Label(current_class)
-                        yield Label(phone_number)
+                        with Vertical():
+                            yield Label(username)
+                            yield Label(school)
+                            yield Label(current_class)
+                            yield Label(phone_number)
                     
                     yield Label(date, id="label_DATE")
                     yield Label(message, id="label_MESSAGE")
