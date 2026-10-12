@@ -14,7 +14,7 @@ from textual.app import ComposeResult
 from textual.containers import Horizontal, Vertical, Container
 from textual.widgets import Label, Button, Digits, Static
 
-from utils.utils_DATETIME import get_datetime
+from utils.DATETIME import get_datetime
 
 # The idea is for these variables to be set on first start-up.
 # Save it to a file and read it instead of having these be variables.
