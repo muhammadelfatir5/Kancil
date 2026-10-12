@@ -28,6 +28,7 @@ class HomeScreen(Screen):
     CSS= """
         #container_BUTTON-PROGRAM-WRAPPER {
             layout: grid;
+            align: center middle;
             grid-size: 2 2;
             grid-columns: 22 22;
             grid-rows: 5 5;
@@ -99,7 +100,7 @@ class HomeScreen(Screen):
                     subprocess.run(["vim"]) # Gotta teach 'em young and teach 'em right!
             case "button_PROGRAM-MC":
                 with self.app.suspend():
-                    subprocess.run(["mc", "--nocolor"])
+                    subprocess.run(["mc", "--nocolor", "$HOME", "$HOME"])
             case "button_PROGRAM-TERMINAL":
                 with self.app.suspend():
                     print("Pro-tip: Press CTRL+D to exit the terminal!")
