@@ -5,8 +5,8 @@
 
 from textual.app import App
 
-from screens.screens_HOME import HomeScreen
-from screens.screens_SETTINGS import SettingScreen
+from screens.HOME import HomeScreen
+from screens.SETTINGS import SettingScreen
 
 class KancilUI(App):
     def on_mount(self):
